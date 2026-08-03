@@ -26,7 +26,7 @@ public class RegistrationPage {
     By buttonRegistration = By.xpath("//span[@class='button--_ckCX _accent--di6kg _sizeL--cOYoD _hasText--a86Tm _interactive--hyuU0']");
     By checkBoxOffers = By.xpath("//div[@class='check--Mp6Y0']");
     By hrefMoreDetailed = By.xpath("//div[@class='origin-checkbox-button--EhZRt origin-checkbox-button-default--odcW9']");
-    By checkBoxAge = By.xpath("//svg[@fill='none']");
+    By checkBoxAge = By.xpath("//svg[@class='check__icon--FVXU8']");
     RegistrationPage(WebDriver driver, WebDriverWait wait){
         this.driver = driver;
         this.wait = wait;
@@ -58,6 +58,8 @@ public class RegistrationPage {
                 .click();
     }
     public void setCheckBoxOffers(){
+        wait
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='check--Mp6Y0']")));
         WebElement element = driver.findElement(checkBoxOffers);
         if (!element.isSelected()){
             element
@@ -70,7 +72,10 @@ public class RegistrationPage {
                 .click();
     }
     public void setCheckBoxAge(){
+        wait
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//svg[@class='check__icon--FVXU8']")));
         WebElement element = driver.findElement(checkBoxAge);
+        if (!element.isSelected())
             element
                     .click();
 
