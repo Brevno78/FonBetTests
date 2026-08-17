@@ -17,7 +17,7 @@ public class Password {
     By passwordField = By.xpath("//input[@name='password']");
 
     @Test
-    public void PositivPasswordTest(){
+    public void PositivePasswordTest(){
         webDriver
                 .manage()
                 .window()
