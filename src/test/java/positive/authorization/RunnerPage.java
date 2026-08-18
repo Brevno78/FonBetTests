@@ -1,12 +1,12 @@
 package positive.authorization;
 
-import PositiveTests.BasePage;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import pages.AuthorizationPage;
+import pages.BasePage;
 
-import java.sql.Driver;
-
-public class RunnerPage extends BaseAuthorizationPage {
+public class RunnerPage extends BasePage {
     AuthorizationPage authorizationPage;
     @BeforeEach
     public void setUp()
@@ -26,5 +26,14 @@ public class RunnerPage extends BaseAuthorizationPage {
                 .setPasswordLocator("gki,W%/#%6rmMfA");
         authorizationPage
                 .setButtonEntrance();
+    }
+    @AfterEach
+    public void exitAccount(){
+     authorizationPage
+             .setButtonMyProfile();
+     authorizationPage
+             .setButtonExit();
+     driver
+             .close();
     }
 }

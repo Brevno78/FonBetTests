@@ -1,4 +1,4 @@
-package positive.authorization;
+package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +14,8 @@ public class AuthorizationPage {
     By numberPhoneLocator = By.xpath("//input[@name='login']");
     By passwordLocator = By.xpath("//input[@type='password']");
     By buttonEntrance = By.xpath("//span[@class='button--_ckCX _accent--di6kg _sizeL--cOYoD _hasText--a86Tm _interactive--hyuU0']");
+    By buttonMyProfile = By.xpath("//a[@class='button--_ckCX _hasText--a86Tm _interactive--hyuU0 header--account-button-main--Xj5WK']");
+    By buttonExit = By.xpath("//span[@class='button--_ckCX _secondaryColor--Pt8HI _sizeM--QC_LH _hasText--a86Tm _interactive--hyuU0 exit--iLAp7']");
 
     public AuthorizationPage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
@@ -38,6 +40,20 @@ public class AuthorizationPage {
         wait
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='button--_ckCX _accent--di6kg _sizeL--cOYoD _hasText--a86Tm _interactive--hyuU0']")));
         WebElement element = driver.findElement(buttonEntrance);
+        element
+                .click();
+    }
+    public void setButtonMyProfile(){
+        wait
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@class='button--_ckCX _hasText--a86Tm _interactive--hyuU0 header--account-button-main--Xj5WK']")));
+        WebElement element = driver.findElement(buttonMyProfile);
+        element
+                .click();
+    }
+    public void setButtonExit(){
+        wait
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='button--_ckCX _secondaryColor--Pt8HI _sizeM--QC_LH _hasText--a86Tm _interactive--hyuU0 exit--iLAp7']")));
+        WebElement element = driver.findElement(buttonExit);
         element
                 .click();
     }

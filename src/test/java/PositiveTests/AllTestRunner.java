@@ -7,11 +7,10 @@ import jdk.jfr.Description;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import pages.BasePage;
+import pages.RegistrationPage;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
-public class AllTestRunner extends BasePage{
+public class AllTestRunner extends BasePage {
     RegistrationPage registrationPage;
     @BeforeEach
     public void setUp(){
@@ -37,5 +36,4 @@ public class AllTestRunner extends BasePage{
         registrationPage.setCheckBoxAge();
         registrationPage.setButtonRegistration();
     }
-
 }

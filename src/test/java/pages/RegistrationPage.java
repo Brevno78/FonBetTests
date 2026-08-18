@@ -1,4 +1,4 @@
-package PositiveTests;
+package pages;
 
 //import io.qameta.allure.Epic;
 //import io.qameta.allure.Feature;
@@ -7,11 +7,8 @@ package PositiveTests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.nio.file.WatchEvent;
 
 //@Epic("Фонбет тетсирование селениум")
 //@Feature("форма регистрации")
@@ -27,7 +24,7 @@ public class RegistrationPage {
     By checkBoxOffers = By.xpath("//div[@class='check--Mp6Y0']");
     By hrefMoreDetailed = By.xpath("//div[@class='origin-checkbox-button--EhZRt origin-checkbox-button-default--odcW9']");
     By checkBoxAge = By.xpath("//svg[@class='check__icon--FVXU8']");
-    RegistrationPage(WebDriver driver, WebDriverWait wait){
+    public RegistrationPage(WebDriver driver, WebDriverWait wait){
         this.driver = driver;
         this.wait = wait;
     }
