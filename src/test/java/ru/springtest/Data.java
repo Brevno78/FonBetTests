@@ -6,6 +6,6 @@ public class Data {
     public static final Person person_Test_2 = new Person("firstname", "lastname", "address", "city", 1213);
     public static final Person testDev = new Person("firstname", "lastname", "address", "city", 123124 );
     public void test(){
-
+        System.out.println("Запуск ветки Dev");
     }
 }
