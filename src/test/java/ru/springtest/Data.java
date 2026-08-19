@@ -7,5 +7,6 @@ public class Data {
     public static final Person testDev = new Person("firstname", "lastname", "address", "city", 123124 );
     public void test(){
         System.out.println("Запуск ветки Dev");
+        System.out.println("Запуск ветки");
     }
 }
