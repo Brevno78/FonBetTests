@@ -8,5 +8,6 @@ public class Data {
     public void test(){
         System.out.println("Запуск ветки Dev");
         System.out.println("Запуск ветки");
+        System.out.println("Ещё один запуск");
     }
 }
