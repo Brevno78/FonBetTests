@@ -10,7 +10,7 @@ import org.junit.jupiter.api.DisplayName;
 import pages.BasePage;
 import pages.RegistrationPage;
 
-public class AllTestRunner extends BasePage {
+public class AllTestRunnerTest extends BasePage {
     RegistrationPage registrationPage;
     @BeforeEach
     public void setUp(){

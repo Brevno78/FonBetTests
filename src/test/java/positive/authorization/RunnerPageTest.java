@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import pages.AuthorizationPage;
 import pages.BasePage;
 
-public class RunnerPage extends BasePage {
+public class RunnerPageTest extends BasePage {
     AuthorizationPage authorizationPage;
     @BeforeEach
     public void setUp()
